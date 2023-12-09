@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurant page3</title>
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/655a9d9791e5c13bb5b1b423/1hfkvf6dn';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <style>
+            .Restname{
+                font-style:normal;
+                font-size:50px;
+                font-weight:900;
+                text-shadow: 3px 3px grey;
+                border: 1px solid black;
+                display:block;
+                background-color:aliceblue;
+                text-align:center;
+                border-radius:30px;
+                margin:10px 15px;
+            }
+            .desc{
+                border:1px solid black;
+                padding:15px;
+                margin: 15px;
+                background-color:khaki;
+                border-radius:10px;
+            }
+            .desc .Restdesc h2{
+                color: blue;
+                font-style:oblique;
+            }
+            .Restinfo{
+                font-style:10px;
+                font-weight:400;
+                text-decoration:none;
+            }
+            .Restinfo a:hover{
+                text-decoration:none;
+            }
+            .footer{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background-color:#111;
+}
+
+.footer-container{
+  width: 100%;
+  padding: 70px 30px 20px;
+  background-color: #111;
+}
+
+.socialIcons{
+  display: flex;
+  justify-content:center;
+}
+
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i{
+  font-size: 2;
+  color: black;
+  opacity: 0.9;
+
+}
+
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+  background-color: white;
+  transition: 0.5s;
+}
+
+.footerNav{
+  margin:30px 0;
+}
+
+.footerNav ul{
+  display:flex;
+  justify-content:center;
+}
+
+.footerNav ul li a{
+  color:white;
+  margin:20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition:0.5s
+}
+
+.footerNav ul li a:hover{
+  opacity:1;
+}
+
+.footerBottom{
+  background-color: #322e2e;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity:0.7;
+  text-transform: uppercase;
+  letter-spacing:1px;
+  font-weight:400;
+  margin: 0px 5px;
+}
+
+@media (max-width:700px){
+  .footerNav ul{
+    flex-direction: column;
+  }
+  .footerNav ul li{
+    width:100%;
+    text-align: center;
+    margin: 10px
+  }
+  .carousel.caption button{
+    width:100%;
+    text-align: center;
+  }
+}
+        </style>
+        </head>
+        <body style="background-color: honeydew;">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="font-weight:600px" href="#">MUARPANDA</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://th.bing.com/th/id/R.12a22015f17bfe42e42da4d78e1f7697?rik=qJKid0SSHKUbsA&riu=http%3a%2f%2ffarm9.staticflickr.com%2f8326%2f8110017547_445998f477_z.jpg&ehk=b6ldQBf04m7s%2bIUZKvvW5nRq9S4VSw2gaabTceA%2fnUQ%3d&risl=&pid=ImgRaw&r=0" class="d-block w-100" alt="Restaurant1">
+              </div>
+            </div>
+          </div>
+          <div class="Restname">
+            <p>Hai Sing Seafood Restaurant</p>
+          </div>
+          <div class="desc">
+          <div class="Restdesc">
+            <h2>Description</h2>
+            <p>Hai Sing Seafood Restaurant, located in the picturesque setting of Parit Jawa, beckons seafood enthusiasts to indulge in a gastronomic adventure. Renowned for our commitment to freshness and quality, our restaurant offers an extensive array of delectable seafood dishes prepared with expertise and care. Immerse yourself in the flavors of the sea at Hai Sing Seafood Restaurant, where every meal is a celebration of the finest catch from local waters</p>
+          </div>
+          <div class="Restinfo">
+            <p>Address : <a href="https://www.bing.com/search?pglt=673&q=Hai+Sing+restaurant&cvid=97cc1b0a5a53474b9a34a82ddeac8f74&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQ6wcYQNIBCTE2MTkyajBqMagCALACAA&FORM=ANSPA1&PC=ACTS" alt="Restaurant Location">PKB, 64, Jalan Pantai, 84150 Parit Jawa, Johor, Malaysia</a></p>
+            <p>Contact : +60 12-6945564</p>
+          </div>
+          </div>
+          <div class="card-group">
+            <div class="card" style="margin:10px 10px; padding:10px 10px;">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/91/8a/76/signature-asam-fish.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Asam Fish</h5>
+                <p class="card-text"> RM45.00 </p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+              </div>
+            </div>
+            <div class="card" style="margin:10px 10px; padding:10px 10px;">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/fd/59/6a/delicious-fried-octopus.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Fried Octopus</h5>
+                <p class="card-text">RM 28.00</p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+              </div>
+            </div>
+            <div class="card" style="margin:10px 10px; padding:10px 10px;">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/91/8a/78/kedai-makanan-hai-sing.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">KangKong</h5>
+                <p class="card-text">RM16.00</p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+                </div>
+            </div>
+          </div>
+          <div class="card-group">
+            <div class="card" style="margin:10px 10px; padding:10px 10px;">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/91/8a/75/caption.jpg" class="card-img-top" alt="..." height="300">
+              <div class="card-body">
+                <h5 class="card-title">Fried Chicken</h5>
+                <p class="card-text"> RM20.00 </p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+              </div>
+            </div>
+            <div class="card" style="margin:10px 10px; padding:10px 10px; ">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/92/55/e2/caption.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Spicy Sauce Chicken</h5>
+                <p class="card-text">RM 22.00</p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+              </div>
+            </div>
+            <div class="card" style="margin:10px 10px; padding:10px 10px;">
+              <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/93/29/fe/signature-tofu.jpg" class="card-img-top" alt="..." height:100px; width:100px>
+              <div class="card-body">
+                <h5 class="card-title">Taohu</h5>
+                <p class="card-text">RM14.00</p>
+                <a href="/order.html" >
+                <button type="button" class="btn btn-primary">Order</button>
+                </a>
+                </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="footercontainer">
+              <div class=socialIcons>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+              <div class="footerNav">
+                <ul>
+                 <li><a href="/">Home</a></li>
+                 <li><a href="">News</a></li>
+                 <li><a href="/aboutus.html">About</a></li>
+                 <li><a href="">Contact us</a></li>
+                 <li><a href="/ourteam.html">Our Team</a></li>
+                 </ul>
+              </div>
+              <div class="footerBottom">
+                <p>Copyright &copy;2023 Designed by <span class="designer"></span>THE MANGEKYO Team</span></p>
+              </div>
+            </div>
+            </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
