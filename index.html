@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.js">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Muar Panda</title>
+    <!--Start of Tawk.to Script-->
+    <style>.main{
+      border-radius: 15px;
+    }
+    .navbar-brand{
+      margin:0;
+      text-align: left;
+    }
+    
+    .navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: left;
+        padding:10 10vw;
+        z-index: 9;
+        background: rgb(140, 165, 172);
+    
+      }
+    
+      .container-fluid{
+        height: 5rem;
+        font-size: 20px;
+        font-weight:600;
+        color: var(--primary-text-color);
+        padding: 10vm 10vm 10vm 10vm;
+      }
+    
+      .nav{
+        display: flex;
+        gap: 5rem;
+        list-style: none;
+        margin-left: 5%;
+      }
+    
+      .nav-item{
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: capitalize ;
+        padding: .1rem 1rem;
+        transition: .2s;
+        text-size-adjust: 15rem;
+        color:chocolate;
+        background-color: white;
+      }
+      .popup{
+        position: absolute;
+        top: -500%;
+        left: 50%;
+        opacity:0;
+        transform:translate(-50%,-50%);
+        width:380px;
+        padding:20px 30px;
+        background:#fff;
+        box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+        border-radius: 10px;
+        transition:top 0ms ease-in-out 200ms,
+                   opacity 200ms ease-in-out 0ms,
+                   transform 20ms ease-in-out 0ms;
+      }
+    .popup.active{
+      top:500%;
+      opacity:1;
+      transform:translate(-50%,-50%) scale(1);
+      transition:top 0ms ease-in-out 200ms,
+                   opacity 200ms ease-in-out 0ms,
+                   transform 20ms ease-in-out 0ms;
+    
+    }
+      .popup .close-btn{
+        position: absolute;
+        top:10px;
+        right: 10px;
+        width: 15px;
+        height: 15px;
+        background:#888;
+        color:#eee;
+        text-align:center;
+        line-height:15px;
+        border-radius: 15px;
+        cursor:pointer;
+      }
+    
+      .popup .form h2{
+        text-align:center;
+        color:#222;
+        margin:10px 0px 20px;
+        font-size: 25px;
+      }
+      .popup .form .form-element{
+        margin:10px 0px;
+      }
+      .popup .form .form-element label{
+        font-size: 14px;
+        color:#222;
+      }
+      .popup .form .form-element input[type=text],
+      .popup .form .form-element input[type=password] {
+        margin-top:5px;
+        display:block;
+        width:100%;
+        padding:10px;
+        outline:none;
+        border: 1px solid #aaa;
+        border-radius:5px;
+      }
+      .popup .form .form-element input[type="checkbox"]{
+        margin-right:5px;
+      }
+      .popup .form .form-element button{
+        width:100%;
+        height:40px;
+        border:none;
+        outline:none;
+        font-size:15px;
+        background: #222;
+        color:#f5f5f5;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    
+      .popup .form .form-element a{
+        display:block;
+        text-align:right;
+        font-size: 15px;
+        color: #1a79ca;
+        text-decoration:none;
+        font-weight: 600;
+      }
+      .question{
+        font-size: 15px;
+        text-decoration: none;
+        font-weight:100;
+      }
+      .links:hover{
+        color: var(--primary-text-color)
+      }
+    
+      .breadcrumb{
+        min-height:10vh;
+        padding:8vh 4vh;
+        margin:0;
+      }
+    
+      .btn-group1{
+        min-height: 10vh;
+        padding: 3vh 3vh;
+        background-color: lightgrey;
+        align-items:center;
+      }
+    
+      .reason{
+        min-height:25vh;
+        padding:0 20vw;
+        align-items: center;
+        background-color:#f7f7f7;
+      }
+      .reason-heading{
+        font-size: 90px;
+        font-weight:800;
+        color:darkblue;
+        line-height: 5rem;
+      }
+    
+      .reason-line{
+        font-size: 30px;
+        color:darkturquoise;
+        line-height:3rem;
+      }
+    
+      .FAQ{
+        min-height:15vh;
+        padding:0 20vw;
+        align-items: center;
+        background-color:honeydew;
+      }
+    
+      .FAQ-heading{
+        font-size: 60px;
+        font-weight:600;
+        color:darkcyan;
+        line-height: 5rem;
+      }
+    
+    .footer{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+      background-color:#111;
+    }
+    
+    .footer-container{
+      width: 100%;
+      padding: 70px 30px 20px;
+      background-color: #111;
+    }
+    
+    .socialIcons{
+      display: flex;
+      justify-content:center;
+    }
+    
+    .socialIcons a{
+      text-decoration: none;
+      padding: 10px;
+      background-color: white;
+      margin: 10px;
+      border-radius: 50%;
+    }
+    
+    .socialIcons a i{
+      font-size: 2;
+      color: black;
+      opacity: 0.9;
+    
+    }
+    
+    .socialIcons a:hover{
+      background-color: #111;
+      transition: 0.5s;
+    }
+    
+    .socialIcons a:hover i{
+      background-color: white;
+      transition: 0.5s;
+    }
+    
+    .footerNav{
+      margin:30px 0;
+    }
+    
+    .footerNav ul{
+      display:flex;
+      justify-content:center;
+    }
+    
+    .footerNav ul li a{
+      color:white;
+      margin:20px;
+      text-decoration: none;
+      font-size: 1.3em;
+      opacity: 0.7;
+      transition:0.5s
+    }
+    
+    .footerNav ul li a:hover{
+      opacity:1;
+    }
+    
+    .footerBottom{
+      background-color: #322e2e;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footerBottom p{
+      color: white;
+    }
+    .designer{
+      opacity:0.7;
+      text-transform: uppercase;
+      letter-spacing:1px;
+      font-weight:400;
+      margin: 0px 5px;
+    }
+    
+    @media (max-width:700px){
+      .footerNav ul{
+        flex-direction: column;
+      }
+      .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px
+      }
+      .carousel.caption button{
+        width:100%;
+        text-align: center;
+    
+      }
+    }</style>
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/655a9d9791e5c13bb5b1b423/1hfkvf6dn';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  </head>
+  <body style="background-color: honeydew;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="font-weight:600px" href="#">MUARPANDA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+          </ul>
+          <a href="/login.html" target="_blank">
+            <button class="btn-primary" style="margin-right:10px;">Login</button>
+          </a>
+          <a href="/signup.html" target="_blank">
+            <button class="btn-primary" style="margin-right:10px;">Sign Up</button>
+          </a>
+                 <!--Search engine goes here-->
+          
+          <body>
+            <form class="d-flex" >
+                <input class="form-control me-2" type="search"  name="query" placeholder="Search" aria-label="Search" onkeyup="sendData(this)">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                <section id="searchResults">
+                </section>
+
+            </form> <!--below part not related to front end-->
+            <script>
+                function sendData(e){
+                    const searchResults=document.getElementById('searchResults');
+                    let match = e.value.match(/^[a-zA-Z ]*/);
+                    let match2 = e.value.match(/\s*/);
+                    if(match2[0]===e.value){
+                        searchResults.innerHTML='';
+                        return;
+                    }
+                    if(match[0]===e.value){
+                        fetch('getRestaurant',{
+                            method:'POST',
+                            headers:{'Content-Type':'application/json'},
+                            body:JSON.stringify({payload:e.value})
+                        }).then(res=>res.json()).then(data=>{
+                            let payload=data.payload;
+                            searchResults.innerHTML='';
+                            if(payload.length<1){
+                                searchResults.innerHTML='<p>Sorry. Nothing Found.</p>';
+                                return;
+                            }
+                            payload.forEach(item => {
+                            const resultItem = document.createElement('p');
+                            const link = document.createElement('a');
+                            link.href = `${item.link}`;
+                            link.textContent = `${item.name}`;
+                            link.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                redirectToPage(item.link);
+                            });
+        
+                            resultItem.appendChild(link);
+                            searchResults.appendChild(resultItem);
+                        });
+                        });
+                        return;
+                    }
+                    searchResults.innerHTML='';
+                }
+                // Function to redirect to the clicked HTML file
+                function redirectToPage(link) {
+                window.location.href = link;
+            }
+            </script>
+        </body>
+        </div>
+      </div>
+    </nav>
+    <div><nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Johor</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Muar</li>
+      </ol>
+    </nav>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
+          <div class="carousel-caption top-0 mt-4 d-md-block">
+            <h5 class="mt-5 fs-3 text-uppercase">Having a nice taste!</h5>
+            <p class="display-1 fw-bolder text-capitalze">Try our premium food choice.</p>
+            <a href="/guest.html" target="_blank">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Make a reservation</button>
+            <!--button class="btn btn-primary">Order</button>-->
+            
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
+          <div class="carousel-caption top-0 mt-4 d-md-block ">
+            <h5 class="mt-5 fs-3 text-uppercase">Having a nice taste!</h5>
+            <p class="display-1 fw-bolder text-capitalze">Try our premium food choice.</p>
+            <a href="/guest.html" target="_blank">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Make a reservation</button>
+            
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://images.pexels.com/photos/2664216/pexels-photo-2664216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="...">
+          <div class="carousel-caption top-0 mt-4 d-md-block">
+            <h5 class="mt-5 fs-3 text-uppercase">Having a nice taste!</h5>
+            <p class="display-1 fw-bolder text-capitalze">Try our premium food choice.</p>
+            <a href="/guest.html" target="_blank">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Make a reservation</button>
+            
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="reason">
+      <h3 class="reason-heading">Why choosing us?</h3>
+      <p class="reason-line">Here are the reasons why choosing us:</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/2290070/pexels-photo-2290070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="font-weight:bold">Environment</h5>
+            <p class="card-text">The restaurant exudes a cozy yet sophisticated ambiance with its warm, earthy tones and contemporary decor. Seating is a mix of intimate booths and spacious tables, and the soft glow of pendant lights creates a relaxed atmosphere. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="font-weight:bold">Food</h5>
+            <p class="card-text">Fresh herbs contribute a burst of freshness, elevating the overall taste experience. Served piping hot, the comforting warmth enhances the depth of flavors, making each bite a truly memorable culinary journey.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/3186654/pexels-photo-3186654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"style="font-weight:bold">Price</h5>
+            <p class="card-text">The restaurant's commitment to delivering a memorable dining experience is evident in the overall value it provides for the price point.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/8969237/pexels-photo-8969237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><b>Variety</b></h5>
+            <p class="card-text">With a mix of traditional flavors and contemporary twists, the restaurant provides a culinary journey that caters to all palates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="FAQ">
+      <div class="FAQ-heading">Frequent Ask Question</div>
+    </div>
+    <div class="container" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item col-md-12">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            <b>How to make a reservation?</b>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <p>1. Visit muarpanda.com and <b>Sign in</b> if you have an account.</p>
+            <p>2. Search for your preferred restaurant.</p>
+            <p>3. Fill in your booking detail.</p>
+            <p>4. Make a reservation by clicking conformation bar.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item col-md-12">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+            <b>How to review a restaurant?</b>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+          <div class="accordion-body">
+            You need to sign in to your account and search for restaurant. Then, you can scroll down to see reviews of the restaurant.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item col-md-12">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+            <b>Can I cancel my reservation?</b>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body">
+            <strong>It is advisable to think twice before making a reservation.</strong> You cannot cancel your order once your order is <b>being prepared</b>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+    <div class="footercontainer">
+      <div class=socialIcons>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="">News</a></li>
+         <li><a href="/aboutus.html">About</a></li>
+         <li><a href="">Contact us</a></li>
+         <li><a href="/ourteam.html">Our Team</a></li>
+         </ul>
+      </div>
+      <div class="footerBottom">
+        <p>Copyright &copy;2023 Designed by <span class="designer"></span>THE MANGEKYO Team</span></p>
+      </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
