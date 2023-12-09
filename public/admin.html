@@ -1,0 +1,60 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <style>
+    .body{
+      background-color:aqua;
+    }
+    .backcolor{
+      color:black;
+      font-size:20px;
+      font-weight:300;
+    }
+    .name{
+      color:blue;
+      font-weight:1000;
+      font-size:40px;
+      text-shadow: 2px 2px grey;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 20px 60px;
+      margin:20px 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 10px rgba(198,0,0,0.5);
+    }
+    #orderList{
+      display:grid;
+      column-gap:3px;
+      row-gap:3px;
+    }
+    .container{
+      display:grid;
+    }
+    .orderListItem{
+      list-style-type: decimal;
+      row-gap:10px;
+      border:1px solid black;
+      padding:5px 5px;
+    }
+    .deleteBtn{
+      float:right;
+      border: 1px solid black;
+    }
+    .Ttprice{
+      float:right;
+    }
+  </style>
+</head>
+<body class="backcolor">
+  <div class="name">
+  <p>Admin Page</p>
+  </div>
+  <div class="container" id="orderList"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
+
