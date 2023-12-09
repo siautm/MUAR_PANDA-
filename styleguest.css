@@ -1,0 +1,10 @@
+.body{
+    background-color: rgb(56, 147, 147);
+}
+.word{
+    font-size: 200px;
+    font-weight: 200;
+}
+.btn-group{
+    align-items: center;
+}
