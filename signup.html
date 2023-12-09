@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <style>.main {
+        padding: 20px;
+        font-family: 'Helvetica', serif;
+        box-shadow: 5px 5px 7px 5px #888888;
+        margin-top: 50px;
+        background-color:lightgoldenrodyellow;
+    }
+    
+    .main h2 {
+        font-size: 50px;
+        text-align: center;
+        font-weight:bold;
+        color: black;
+        text-shadow: 2px 2px grey ;
+    }
+    
+    input {
+        font-family: 'Helvetica', serif;
+        width: 100%;
+        font-size: 20px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid #767474;
+    }
+    
+    input[type=submit] {
+        font-family: 'Helvetica', serif;
+        width: 100%;
+        background-color: lightblue;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        margin: 4px 2px;
+        border-radius: 10px;
+    }</style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 main">
+                <form action="/sign_up" method="POST">
+                    <h2>SignUp Form</h2>
+                    <label>Username</label>
+                    <input type="text" class="box" id="username" name="username" placeholder="username" required />
+                    <br>
+                    <label>Email</label>
+                    <input type="text" class="box" id="email" name="email" placeholder="email" required />
+                    <br>
+                    <label>Password</label>
+                    <input type="text" class="box" id="password" name="password" placeholder="password" required />
+                    <br>
+                    <label>Address</label>
+                    <input type="text" class="box" id="address" name="address" placeholder="address" required />
+                    <br>
+                    <label>City</label>
+                    <input type="text" class="box" id="city" name="city" placeholder="city" required />
+                    <br>
+                    <input type="submit" value="Submit" id="submit" />
+                </form>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
